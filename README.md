@@ -25,9 +25,3 @@ unlabeled to mirror how the test rows are scored. Hard self-training was tested 
 seed; mean over five seeds is 0.684 (sd 0.004, min 0.679). Ablation on the same test set:
 SVM+kNN average 0.639 -> add language-aware stacking 0.653 -> add transductive label spreading
 0.683, which also raises the worst language (`fra`) from 0.53 to 0.60.
-
-**Pass threshold:** **0.58** (minimum; recorded in `task/config.yaml`). Qwen-Plus runs
-(linear/tree approaches) top out around 0.51, while any solution that finds the nonlinear
-neighbor/kernel structure reaches ~0.60 (single model) to ~0.68 (full stack). 0.58 sits in
-that gap, so Qwen fails and a competent frontier solution passes with room for run-to-run
-variance.
